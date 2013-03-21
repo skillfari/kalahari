@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Skillfari</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="#" class="brand">Skillfari</a>
+                <ul class="nav">
+                    <form class="navbar-search pull-left">
+                        <input type="text" class="search-query input-small" placeholder="Search">
+                    </form>
+                    <li><a href="#">Mail</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="#">Create Expert Board</a></li>
+                    <li><a href="#">Create Board</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+  <div ng-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
