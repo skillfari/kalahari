@@ -12,9 +12,13 @@ function MyCtrl2() {
 MyCtrl2.$inject = [];
 
 
-function UserProfileCtrl($scope, $routeParams, User) {
-    $scope.phone = User.get({userId: $routeParams.userId}, function(user) {
-        $scope.mainImageUrl = user.images[0];
+function UserCtrl($scope, $routeParams, User) {
+    console.log($routeParams);
+    $scope.user = User.get({userId: $routeParams.userId}, function(user) {
+        console.log(user);
+        $scope.id = user.id;
+        $scope.boards = user.boards
     });
 }
-UserProfileCtrl.$inject = ['$scope', '$routeParams', 'User'];
+UserCtrl.$inject = ['$scope', '$routeParams', 'User'];
+

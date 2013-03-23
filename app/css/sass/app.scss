@@ -1,0 +1,120 @@
+/* app css stylesheet */
+
+@import "variables";
+@import "functions";
+@import "mixins";
+
+// Clear sticky nav header from content
+
+body {
+    padding-top: 120px;
+}
+
+// Miscellaneous
+
+.clearMarginTop{
+  margin-top: 0;
+}
+.clearMarginLeft {
+  margin-left: 0 !important;
+}
+
+.setFontSizeTo6 {
+  font-size: 6px;
+}
+
+.addMarginTop25 {
+  margin-top: 25px ;
+}
+
+.boldTest {
+  font-weight: bold;
+}
+
+.centerContents {
+  text-align: center;
+}
+
+
+//UserProfile Page
+
+
+.skillFariBoardHeader {
+  background: url("../img/skillfari_boards_header_user_profile.png") repeat-y;
+  border: 1px solid #000000;
+  color: #ffffff;
+  font-size: 20px;
+  text-indent: 10px;
+  margin-left: 20px;
+  width: 620px;
+}
+
+.friendHeader {
+  background: url("../img/friends_header_user_profile.png") repeat-y;
+  border: 1px solid #000000;
+  color: #ffffff;
+  text-indent: 10px;
+  width: 300px;
+}
+
+.progressUpdateHeader {
+  background: url("../img/pg_header_user_profile.png") repeat-y;
+  border: 1px solid #000000;
+  color: #ffffff;
+  text-indent: 10px;
+  width: 300px;
+}
+
+
+// Adjust Friends Photos on User Profile Page
+
+.friendsPhotos {
+  margin: 10px 5px 0 0;
+}
+
+// Style main profile section on user profile page
+.userProfile {
+
+}
+
+// Style boards in general on User Profile Page
+.userBoard {
+  border: 2px solid #000000;
+  @include border_radius(5px);
+  height: 300px;
+  h4 {
+    height: 50px;
+  }
+  // Inner div in board that houses skill, level, and description
+  div {
+    border: 2px solid #000000;
+    height: 175px;
+    @include border_radius(4px);
+    margin: 15px;
+  }
+
+  p {
+    margin: 0;
+    padding: 5px;
+
+    &.even {
+      border: 2px solid #000000;
+      height: 60px;
+    }
+
+    &.odd {
+      font-size: 25px;
+      height: 40px;
+      line-height: 28px;
+      text-transform: capitalize;
+    }
+  }
+  text-align: center;
+}
+
+// Style friends list on User Profile Page
+.userFriendsList {
+  $totalWidth: 300px;
+  text-align: center;
+  width: $totalWidth/4;
+}

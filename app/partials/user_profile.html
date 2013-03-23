@@ -1,0 +1,76 @@
+<div class="row"  ng-controller="UserCtrl">
+    <div class="span8">
+        <div class="row userProfile">
+            <div class="span4"><img src="http://placehold.it/500x300" class="img-rounded"></div>
+            <div class="span4 pull-right">
+                <h2 class="clearMarginTop">{{user.first_name}} {{user.last_name}}</h2>
+                <p>My dream job is {{ user.user_objective }}</p>
+                <p>{{user.user_statement}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span8 addMarginTop25">
+                <button class="btn btn-inverse" type="button">View Profile</button>
+                <button class="btn btn-inverse" type="button">Add a Skill</button>
+                <button class="btn btn-inverse" type="button">Create an Expert Board</button>
+                <button class="btn btn-inverse" type="button">Create Board</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="addMarginTop25">
+                <h3 class="skillFariBoardHeader">Your Skillfari Boards</h3>
+                <div ng-repeat="board in user.boards">
+                    <div ng-class-even="'pull-right clearMarginLeft'" class="span4 userBoard addMarginTop25">
+                        <h4>{{board.title}}</h4>
+                        <div>
+                            <p class="boldText odd">{{board.skill.name}}</p>
+                            <p class="even">{{board.description}}</p>
+                            <p class="boldText odd">{{board.level.status}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="addMarginTop25">
+                <h3 class="skillFariBoardHeader">Expert Skillfari Boards</h3>
+                <div ng-repeat="board in user.boards">
+                    <div ng-class-even="'pull-right clearMarginLeft'" class="span4 userBoard addMarginTop25">
+                        <h4>{{board.title}}</h4>
+                        <div>
+                            <p class="boldText odd">{{board.skill.name}}</p>
+                            <p class="even">{{board.description}}</p>
+                            <p class="boldText odd">{{board.level.status}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="span4">
+        <div class="row">
+            <div class="span4">
+                <h3 class="clearMarginTop friendHeader">Friends</h3>
+                <div class="userFriendsList pull-left addMarginTop25"  ng-repeat="friend in user.friends">
+                    <div>
+                        <img ng-src="{{friend.imageUrl}}" class="img-rounded friendsPhotos">
+                    </div>
+                    <span class="setFontSizeTo6">{{ friend.user_name }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row addMarginTop25">
+            <div class="span4">
+                <h3 class="clearMarginTop progressUpdateHeader">Progress Update</h3>
+                <div class="centerContents addMarginTop25" ng-repeat="board in boards">
+                    <button class="btn btn-inverse" type="button">{{board.skill.name}}</button>
+                    <button class="btn btn-inverse" type="button">{{board.level.status}}</button>
+                    <p class="boldTest addMarginTop25">Completion</p>
+                    <div>
+                        <img src="http://placehold.it/150&text=20%25" class="img-circle">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>

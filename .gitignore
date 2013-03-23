@@ -1,0 +1,5 @@
+#Remove all intellij Files
+/.idea
+#Remove logs and test dirs
+/test
+/logs

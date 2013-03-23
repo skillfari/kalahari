@@ -1,5 +1,1 @@
-/* app css stylesheet */
-
-body {
-    padding-top: 60px;
-}
+body{padding-top:120px}.clearMarginTop{margin-top:0}.clearMarginLeft{margin-left:0 !important}.setFontSizeTo6{font-size:6px}.addMarginTop25{margin-top:25px}.boldTest{font-weight:bold}.centerContents{text-align:center}.skillFariBoardHeader{background:url("../img/skillfari_boards_header_user_profile.png") repeat-y;border:1px solid #000;color:#ffffff;font-size:20px;text-indent:10px;margin-left:20px;width:620px}.friendHeader{background:url("../img/friends_header_user_profile.png") repeat-y;border:1px solid #000;color:#ffffff;text-indent:10px;width:300px}.progressUpdateHeader{background:url("../img/pg_header_user_profile.png") repeat-y;border:1px solid #000;color:#ffffff;text-indent:10px;width:300px}.friendsPhotos{margin:10px 5px 0 0}.userBoard{border:2px solid #000;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:300px;text-align:center}.userBoard h4{height:50px}.userBoard div{border:2px solid #000;height:175px;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;margin:15px}.userBoard p{margin:0;padding:5px}.userBoard p.even{border:2px solid #000;height:60px}.userBoard p.odd{font-size:25px;height:40px;line-height:28px;text-transform:capitalize}.userFriendsList{text-align:center;width:75px}

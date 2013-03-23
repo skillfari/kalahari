@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="skillfariApp">
 <head>
   <meta charset="utf-8">
   <title>Skillfari</title>
@@ -13,7 +13,7 @@
             <div class="container">
                 <a href="#" class="brand">Skillfari</a>
                 <ul class="nav">
-                    <form class="navbar-search pull-left">
+                    <form class="navbar-search pull-right">
                         <input type="text" class="search-query input-small" placeholder="Search">
                     </form>
                     <li><a href="#">Mail</a></li>
@@ -27,7 +27,7 @@
     </div>
 
 
-  <div ng-view></div>
+  <div class="container" ng-view></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
@@ -38,5 +38,6 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
 </body>
 </html>
