@@ -3,3 +3,8 @@
 #Remove logs and test dirs
 /test
 /logs
+# Remove Mac specific files
+/.DS_Store
+# Remove cache files and tmp files
+/.sass-cache
+/.tmp
