@@ -35,14 +35,18 @@ body {
   text-align: center;
 }
 
+// Override default Twitter Bootstrap Stylings
+.pager li > a {
+  color: $black;
+}
 
 //UserProfile Page
 
 
 .skillFariBoardHeader {
   background: url("../img/skillfari_boards_header_user_profile.png") repeat-y;
-  border: 1px solid #000000;
-  color: #ffffff;
+  border: 1px solid $black;
+  color: $white;
   font-size: 20px;
   text-indent: 10px;
   margin-left: 20px;
@@ -51,16 +55,16 @@ body {
 
 .friendHeader {
   background: url("../img/friends_header_user_profile.png") repeat-y;
-  border: 1px solid #000000;
-  color: #ffffff;
+  border: 1px solid $black;
+  color: $white;
   text-indent: 10px;
   width: 300px;
 }
 
 .progressUpdateHeader {
   background: url("../img/pg_header_user_profile.png") repeat-y;
-  border: 1px solid #000000;
-  color: #ffffff;
+  border: 1px solid $black;
+  color: $white;
   text-indent: 10px;
   width: 300px;
 }
@@ -79,7 +83,7 @@ body {
 
 // Style boards in general on User Profile Page
 .userBoard {
-  border: 2px solid #000000;
+  border: 2px solid $black;
   @include border_radius(5px);
   height: 300px;
   h4 {
@@ -87,7 +91,7 @@ body {
   }
   // Inner div in board that houses skill, level, and description
   div {
-    border: 2px solid #000000;
+    border: 2px solid $black;
     height: 175px;
     @include border_radius(4px);
     margin: 15px;
@@ -98,7 +102,7 @@ body {
     padding: 5px;
 
     &.even {
-      border: 2px solid #000000;
+      border: 2px solid $black;
       height: 60px;
     }
 
@@ -118,3 +122,39 @@ body {
   text-align: center;
   width: $totalWidth/4;
 }
+
+// Create Board
+
+.createBoardItems {
+
+  .createSequenceOne {
+     @include animation(fadeIn 2s ease);
+
+    p {
+      font: {
+        size: 20px;
+        variant: bold;
+      }
+      margin: 15px 0;
+    }
+  }
+
+  .createSequenceTwo {
+    @include ctb-transition(all 0.5s ease);
+    &.ui-animate {
+     opacity: 0;
+     font: {
+       size: 40px;
+     };
+   }
+  }
+
+  .createSequenceThree {
+
+  }
+
+}
+
+
+// Keyframes
+@include fadeIn;

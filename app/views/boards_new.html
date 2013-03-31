@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="span12 centerContents createBoardItems" sf-shownext>
+        <section class="createSequenceOne">
+            <p>I want to</p>
+            <select
+                    ng-controller="BoardCtrl"
+                    required
+                    ng-model="category"
+                    ng-options="category.name for category in categories"
+                    class="input-xlarge">
+                <option value="">Teach/Learn</option>
+            </select>
+            <p>The following skill</p>
+            <div>
+                <input type="text" class="input-xlarge">
+            </div>
+            <p>at this level</p>
+            <div>
+                <select
+                        ng-controller="LevelCtrl"
+                        required
+                        ng-model="level"
+                        ng-options="level.name for level in levels"
+                        class="input-xlarge">
+                    <option value="">Learn</option>
+                </select>
+            </div>
+            <div class="addMarginTop25">
+                <button class="btn btn-large btn-inverse" type="button">Next</button>
+            </div>
+        </section>
+        <section class="createSequenceTwo ui-animate">
+            <p>Hello World</p>
+        </section>
+        <section class="createSequenceThree" ></section>
+    </div>
+</div>
